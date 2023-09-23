@@ -690,7 +690,7 @@ namespace MORT
 
         public static void ShowLog(string log)
         {
-            Console.WriteLine(log);
+            System.Diagnostics.Debug.WriteLine(log);
         }
 
         public static void SetDPI(float dpiX, float dpiY)
