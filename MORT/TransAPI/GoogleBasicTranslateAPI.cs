@@ -37,7 +37,7 @@ namespace MORT
             this._transCode = transCode;
             this._resultCode = resultCode;
 
-            if (transCode != "ja")
+            if (transCode != "en")
             {
                 _isAllowExecutive = true;
             }
@@ -143,12 +143,12 @@ namespace MORT
 
             if(_isAllowExecutive && AdvencedOptionManager.IsExecutive)
             {
-                original = GetResult(original, ref isError, _transCode, "ja");
+                original = GetResult(original, ref isError, _transCode, "en");
                 result = original;
 
                 if(!isError)
                 {
-                    result = GetResult(original, ref isError, "ja", _resultCode);
+                    result = GetResult(original, ref isError, "en", _resultCode);
                 }
             }
             else
