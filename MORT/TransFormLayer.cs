@@ -6,8 +6,6 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 
-
-
 namespace MORT
 {
     public partial class TransFormLayer : Form, ITransform
