@@ -67,8 +67,9 @@ namespace MORT
             //string requestLog = $"https://translate.googleapis.com/translate_a/single?client={clientType}&sl={transCode}&tl={resultCode}&dt=t&q={RestSharp.Extensions.StringExtensions.UrlEncode(original)}";
 
             //Util.ShowLog($"Google Request : {requestLog}");
-
-            var client = new RestClient($"https://translate.googleapis.com/translate_a/single?client={clientType}&sl={transCode}&tl={resultCode}&dt=t&q={RestSharp.Extensions.StringExtensions.UrlEncode(original)}");
+            string url = $"https://translate.googleapis.com/translate_a/single?client={clientType}&sl={transCode}&tl={resultCode}&dt=t&q={RestSharp.Extensions.StringExtensions.UrlEncode(original)}";
+            Util.ShowLog(url);
+            var client = new RestClient(url);
 
             var request = new RestRequest(Method.GET);
 
