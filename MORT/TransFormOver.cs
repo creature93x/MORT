@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -557,6 +557,7 @@ namespace MORT
                 {
 
                     sf.Alignment = stringFormat.Alignment;
+                    sf.FormatFlags = StringFormatFlags.DirectionRightToLeft;
                     Color backgroundColor = Color.FromArgb(alpha, Color.Red);
                     g.Clear(backgroundColor);
 
@@ -941,8 +942,6 @@ namespace MORT
         }
 
         #endregion
-
-
 
 
     }
