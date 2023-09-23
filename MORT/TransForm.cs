@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -26,6 +26,7 @@ namespace MORT
         private delegate void myDelegate(string transText, string ocrText, bool isShowOCRResultFlag, bool isSaveOCRFlag);
         private void updateProgress(string transText, string ocrText, bool isShowOCRResultFlag, bool isSaveOCRFlag)
         {
+
             transTextBox.Text = Regex.Replace(transText, @"\r\n?|\n", System.Environment.NewLine); ;
             ocrText = Regex.Replace(ocrText, @"\r\n?|\n", System.Environment.NewLine); ;
             if (isShowOCRResultFlag == true)
@@ -162,7 +163,10 @@ namespace MORT
         public TransForm()
         {
             InitializeComponent();
-            textBox.RightToLeft = RightToLeft.Yes;
+
+            transTextBox.RightToLeft = RightToLeft.Yes;
+
+
             _defaultFont = this.transTextBox.Font;
             string basicText = Properties.Settings.Default.BASIC_TEXT;
             basicText = string.Format(basicText, Properties.Settings.Default.MORT_VERSION);
