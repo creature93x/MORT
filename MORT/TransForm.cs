@@ -162,6 +162,7 @@ namespace MORT
         public TransForm()
         {
             InitializeComponent();
+            textBox.RightToLeft = RightToLeft.Yes;
             _defaultFont = this.transTextBox.Font;
             string basicText = Properties.Settings.Default.BASIC_TEXT;
             basicText = string.Format(basicText, Properties.Settings.Default.MORT_VERSION);
